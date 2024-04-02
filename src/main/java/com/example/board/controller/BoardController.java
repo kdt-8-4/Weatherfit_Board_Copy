@@ -167,6 +167,7 @@ public class BoardController {
     @GetMapping("/search")
     public List<BoardSearchDTO> search(@RequestParam(required = false) List<String> categories,
                                        @RequestParam(required = false) List<String> hashtags) {
+        System.out.println("search api called");
         return boardService.search(categories, hashtags);
     }
 
