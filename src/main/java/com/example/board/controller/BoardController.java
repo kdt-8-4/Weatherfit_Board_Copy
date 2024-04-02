@@ -50,6 +50,7 @@ public class BoardController {
     @GetMapping("/list")
     public List<BoardListResponseDTO> listBoards(@RequestParam(required = false) String sort) {
         List<BoardListResponseDTO> list;
+        System.out.println("list api called");
         if ("date".equals(sort)) {
             list = boardService.findDate();
         } else if ("like".equals(sort)) {
