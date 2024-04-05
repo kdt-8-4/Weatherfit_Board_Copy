@@ -250,6 +250,7 @@ public class BoardService {
                     .category(board.getCategory())
                     .temperature(board.getTemperature())
                     .hashTag(board.getHashTag())
+                    .likeList(board.likeEntityToDTO(board.getLikelist()))
                     .likeCount(likeService.countLikes(board.getBoardId()))
                     .images(board.entityToDTO(board.getImages().get(0)))
                     .weatherIcon(board.getWeatherIcon())

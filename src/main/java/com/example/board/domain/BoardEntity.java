@@ -1,5 +1,6 @@
 package com.example.board.domain;
 
+import com.example.board.dto.LikeDTO;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import com.example.board.dto.ImageDTO;
 import com.example.board.repository.BaseEntity;
@@ -61,5 +62,17 @@ public class BoardEntity extends BaseEntity {
                 .imageId(imageEntity.getImageId())
                 .imageUrl(imageEntity.getImageUrl())
                 .build();
+    }
+
+    public List<LikeDTO> likeEntityToDTO(List<LikeEntity> likeEntityList) {
+        List<LikeDTO> list = new ArrayList<>();
+        for(LikeEntity entity : likeEntityList) {
+            list.add(LikeDTO.builder()
+                    .likeId(entity.getLikeId())
+                    .nickName(entity.getNickName())
+                    .build()
+            );
+        }
+        return list;
     }
 }
