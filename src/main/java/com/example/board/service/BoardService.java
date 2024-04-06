@@ -250,7 +250,7 @@ public class BoardService {
                     .category(board.getCategory())
                     .temperature(board.getTemperature())
                     .hashTag(board.getHashTag())
-                    .createdDate(board.getCreateDate())
+                    .createData(board.getCreateDate())
                     .likelist(board.likeEntityToDTO(board.getLikelist()))
                     .likeCount(likeService.countLikes(board.getBoardId()))
                     .images(board.entityToDTO(board.getImages().get(0)))

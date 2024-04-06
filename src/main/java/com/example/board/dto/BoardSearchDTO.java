@@ -18,7 +18,7 @@ public class BoardSearchDTO {
     private ImageDTO images;
     private List<String> category;
     private List<String> hashTag;
-    private LocalDateTime createdDate;
+    private LocalDateTime createData;
     private List<LikeDTO> likelist;
     private String weatherIcon;
 }
