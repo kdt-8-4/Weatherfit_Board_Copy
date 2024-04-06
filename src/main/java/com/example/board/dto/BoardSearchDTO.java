@@ -3,6 +3,8 @@ package com.example.board.dto;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
+
+import java.time.LocalDateTime;
 import java.util.List;
 
 @Getter
@@ -16,7 +18,7 @@ public class BoardSearchDTO {
     private ImageDTO images;
     private List<String> category;
     private List<String> hashTag;
-
-    private List<LikeDTO> likeList;
+    private LocalDateTime createdDate;
+    private List<LikeDTO> likelist;
     private String weatherIcon;
 }
